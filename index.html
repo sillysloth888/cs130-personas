@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <!-- head element from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css"  />
+    <title>Mailroom Kiosk</title>
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="section-wrapper">
+            <div class="section-body">
+                <h1>Understanding Brown's Mailroom Kiosk</h1>
+                <p>
+                    For this project, I conducted <strong>user research</strong> on my university's mailroom kiosk interface. To understand how people use the interface, I observed and interviewed students using the kiosk. Out of my findings, I created <strong>two personas</strong> and a <strong>storyboard</strong>  representing how the mailroom kiosk at Brown University is used by students. 
+                </p>
+            </div>
+        </div>
+        <div class="section-wrapper">
+            <div class="section-body">
+                <h2>Background: What is the mailroom kiosk?</h2>
+                <p>
+                    When I was choosing an interface for my project, I thought about <strong>public interfaces</strong> that I interacted with regularly on campus. I wanted the interface to be fairly simple because I knew I would only have a <strong>few short interactions</strong> with which to understand user behavior, but I still wanted it to be an interface which people would have opinions about. Ultimately, I settled on Brown's mailroom kiosk.
+                </p>
+                <p>
+                    At Brown, student mail gets shipped to a central mailroom 
+                    on campus. When you get to the mailroom building, you use a <strong>kiosk</strong> to indicate that you're picking up your packages. After you're done with the kiosk, you stand in the mailroom until your name is called, indicating that your packages are ready to be collected at the counter. 
+                </p>
+            </div>
+            <div class="box-wrapper">
+                <h3>Sketch of the Kiosk</h3>
+                <div class="image-wrapper">
+                    <img 
+                        id="sketch" 
+                        src="img/interface_sketch.svg"
+                        alt="hand-drawn sketch of kiosk interface"
+                    />
+                    <div class="caption">
+                        <h4>Problem</h4>
+                        <p>
+                             Without a package queue, a staff member would have to 1) ask each student for their name, 2) look up their packages, and 3) retrieve them before moving to the next student. This increases wait times.
+                        </p>
+                        <h4>Solution</h4>
+                        <p>
+                            The kiosk streamlines mail pick-up by parallelizing the process of adding packages to the queue (via the kiosk) and retrieving the packages from the mailroom counter.
+                        </p>
+                        <h4>Key Components</h4>
+                        <ol>
+                            <li>
+                                <strong>Display:</strong> The touch-sensitive screen allows 
+                                students to tap buttons to make selections. 
+                            </li>
+                            <li>
+                                <strong>Card Reader:</strong> Students swipe their Brown ID through the reader to view if they have any packages. Only the orientation show on the reader works.
+                            </li>
+                            <li>
+                                <strong>Indicator Light:</strong> Green by default. 
+                                Turns red if card swipe was unsucessful. 
+                            </li>
+                            <li>
+                                <strong>Package Info:</strong> Tells students the 
+                                number and type of packages they have. The kiosk 
+                                distinguishes between three package types:
+                                <ul>
+                                    <li>Hard Package, Soft Package, Letter Mail</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-wrapper">
+            <h2>Observing Users</h2>
+            <p>
+                To conduct my research, I <strong>observed three students</strong>  using the kiosk in the mailroom. As someone approached the kiosk, I interrupted them (politely) and asked if I could watch them using the kiosk, and ask a few short <strong>questions</strong> afterwards. I recorded interviews with the students' permission. 
+            </p>
+            <div class="subsection-wrapper"> 
+                <h3>Key Observations</h3>
+                <p>
+                    Here are a few <strong>key takeaways</strong> I took away from my observations: 
+                    <ul>
+                        <li>All users initially chose to swipe their <strong>student ID</strong> (rather than tapping the screen to enter their ID number manually) in order to view their packages.
+                        </li>
+                        <li>The main step in the interaction where users diverged in their behavior was swiping their student ID through the <strong>card reader</strong>: 
+                            <ul>
+                                <li>
+                                    Some users swiped their card facing the right way the first time. 
+                                </li>
+                                <li>
+                                    One user swiped their card facing the wrong way. Next, they tapped the display to bring up the keyboard. When the display was unresponsive, they swiped the card facing the other way, which was the correct orientation.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Some users paused for 2-3 seconds on the second screen with the <strong>package information</strong> before making their selection, while others made their selection immediately.
+                        </li>
+                        <li>All users chose to pick up their packages.</li>
+                    </ul> 
+                </p>
+            </div>
+            <div class="subsection">
+                <h3>Interviews</h3>
+                <p>
+                    I came up with several questions to get a better sense of how users interact with kiosk. 
+                </p>
+                <div class=box-wrapper id="questions-box">
+                    <h4>Questions</h4>
+                    <ol id="questions">
+                        <li>Where are you coming from? </li>
+                        <li>How many packages are you picking up today? </li>
+                        <li>Did you know if you had any packages waiting for you before coming?</li>
+                        <li>Do you know exactly what packages you’re picking up?</li>
+                        <li>What information does an ideal kiosk provide? </li>
+                        <li>Does anything about the kiosk frustrate you or slow you down?</li>
+                        <li>Is there anything you wish you could change about the kiosk?</li>
+                        <li>Where are you heading? </li>
+                    </ol>
+                </div>  
+                <p>
+                    Here are the <strong>main insights</strong> I gained from my interviews: 
+                </p>
+                    <ul>
+                        <li>
+                            All users knew they had a package because of the <strong>email notification</strong> the mailroom sends. However, some users had received the email same-day, while one user only vaguely remembered receiving it a while ago.
+                        </li>
+                        <li>
+                            Some users <strong>knew exactly</strong> what packages they were picking up, while others didn’t. One user wasn’t entirely sure if they had a package at all.
+                        </li>
+                        <li>
+                            One user was picking up mail because they happened to be studying there, while others were stopping by after class before heading home.
+                        </li>
+                        <li>
+                            One thought the <strong>orientation of the card reader</strong> made it unclear which way to swipe, and was frustrated that swiping the card twice would place you at the end of the queue. Another didn’t like that there was an awkward pause before the second screen loaded. 
+                        </li>
+                        <li>
+                            Some users stated that they were content with the <strong>amount of information</strong> the kiosks provide, while others wished they gave more detail (e.g. the time the package had arrived). 
+                        </li>
+                    </ul>
+                    <h3>Thoughts</h3>
+                    <p>
+                        Personally, I was pretty <strong>surprised</strong> by these results. I've often thought that the kiosk could benefit from the addition of a few major features, such as being able to select which packages you want to pick up, rather than the current all-or-none system. Overall, there were <strong>fewer complaints</strong> than I thought there would be. 
+                    </p>
+            </div>
+        </div>
+        <div class="section-wrapper">
+            <div class="section">
+                <h2>Personas</h2>
+                <p>
+                    Using the insights I gained from my observations and 
+                    interviews, I constructed <strong>two personas</strong> to represent the trends I noticed in my research: <strong>Punctual Paige</strong> and <strong>Relaxed Robinson</strong>.
+                </p>
+                <p>
+                    To represent each persona, I created an <strong>empathy map</strong>.
+                </p>
+                <div class="box-wrapper" class="persona-wrapper">
+                    <h3>Punctual Paige</h3>
+                    <div class="image-wrapper" class="persona-image-wrapper">
+                        <img 
+                            class="persona-image" 
+                            src="img/paige_persona.svg"
+                            alt="Empathy map representing Punctual Paige"
+                        />
+                        <div class="caption">
+                            <h4>Punctual Paige's Pain Points</h4>
+                            <p>
+                                Punctual Paige is frustrated by <strong>inefficiencies</strong> in the interface because she’s on a tight schedule. These interface problems include:
+                            </p>
+                            <ul>
+                                <li>
+                                    Swiping the card the wrong way, which means she has to try again 
+                                </li>
+                                <li>
+                                    Slow loading between the initial screen and the package information screen 
+                                </li>
+                                <li>
+                                    Being placed at the end of the queue if the kiosk registers two card swipes
+                                </li>
+                            </ul>
+                            <h4>Who does Punctual Paige represent?</h4>
+                            <p>
+                                Paige represents the users who know what packages they have before even stepping into the mailroom.
+                                Like Paige, these users mainly see the kiosk <strong>merely as a button</strong> they need to press in order to pick up their packages, rather than an interface that provides useful information. 
+                            </p>
+                            <p>
+                               For this reason, both Paige and these users’ complaints about the interface mainly revolve around issues that prevent them from completing the interaction <strong>more quickly</strong>. 
+                            </p>
+                        </div>
+                    </div>
+                    <p class="attribution"> 
+                        “Woman" icon used on this page is by Lluisa Iborra from <a href="https://thenounproject.com/browse/icons/term/woman">Noun Project</a>.
+                    </p>
+                </div>
+                <div class="box-wrapper">
+                    <h3>Relaxed Robinson</h3>
+                    <div class="image-wrapper" class="persona-image-wrapper">
+                        <img 
+                            class="persona-image" 
+                            src="img/robinson_persona.svg"
+                            alt="Empathy map representing Relaxed Robinson"
+                        />
+                        <div class="caption">
+                            <h4>Relaxed Robinson's Pain Points</h4>
+                            <p>
+                                Robinson’s main pain point is the <strong>lack of information</strong> the kiosk provides. Since he doesn’t really keep track of the email notifications from the mailroom, he’s not really sure what’s waiting for him when he arrives.
+                            </p>
+                            <p>
+                                If the kiosk just says he has a hard package, he can’t narrow it down amongst the items he’s ordered. 
+                            </p>
+                            <h4>Who does Relaxed Robinson represent?</h4>
+                            <p>
+                                Robinson represents the subset of users who <strong>don’t keep track</strong> of which packages have arrived, instead choosing to retrieve them at their convenience. I created Robinson in part out of the user who had no idea what packages they were picking up.
+                            </p>
+                            <p>
+                                He's also a composite of the user I interviewed who wished that the kiosk provided <strong>more information</strong>, such as the packages’ time of arrival. This user, and those like them, view the kiosk not only as just another step to getting their packages, but an interface which can deliver meaningful information.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="attribution"> 
+                        “Man" icon used on this page is by Lluisa Iborra from <a href="https://thenounproject.com/browse/icons/term/man">Noun Project</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section-wrapper">
+            <div class="section">
+                <h2>Storyboard</h2>
+                <p>
+                    Finally, I created a storyboard to represent Punctual Paige's 
+                    <strong>user journey</strong> from start to end. I chose to storyboard Paige because I felt her <strong>emotional journey</strong> was more <strong>dynamic</strong>, and because the characteristics of her persona seemed to be more prevalent amongst the users I observed. 
+                </p>
+                <div class="box-wrapper">
+                    <h3>Paige Picks Up a Package</h3>
+                    <div class="image-wrapper">
+                        <img
+                            src="img/storyboard.svg"
+                            alt="A storyboard depicting Punctual Paige's journey"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-wrapper">
+            <h2>What I Learned</h2>
+            <ol>
+                <li>
+                    <strong>Leave your assumptions at the door.</strong> I thought
+                    that my personal opinions on the mailroom kiosk would be similar
+                    to the users I observed. This turned out to be completely unfounded.
+                </li>
+                <li>
+                    <strong>Creating personas from a small set of users requires careful thought.</strong> Given the number of users I observed, splitting characteristics from the same user was necessary to 
+                    create an archetypal character, rather than modeling my personas off of one individual.
+                </li>
+                <li>
+                    <strong>Storyboards are about the emotional journey.</strong>
+                    Of course, your storyboard should also clearly show the interface, but representing your users internal world is just as, if not more, crucial to understanding how people interact
+                    with an interface. 
+                </li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

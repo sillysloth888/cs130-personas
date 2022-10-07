@@ -1,0 +1,157 @@
+@font-face {
+    font-family: "Open Sans"; 
+    src: url("fonts/OpenSans-VariableFont_wdth,wght.ttf");
+}
+
+@font-face {
+    font-family: "Rubik"; 
+    src: url("fonts/Rubik-VariableFont_wght.ttf");
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    "Helvetica Neue", sans-serif;
+    color: #2b2c3a;
+    font-size: 20px;
+}
+p {
+    font-size: 20px;
+    margin-bottom: 0;
+    line-height: 150%;
+    margin-block-start: 0.5em;
+}
+
+strong{
+    font-weight: bold;
+    color: #2f3040;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Rubik", sans-serif;
+    color: #2f3040;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+    margin: 1% 0 0;
+}
+
+h3 {
+    font-size: 26px;
+    margin: 4% 0 0;
+}
+
+h4 {
+    font-size: 22px;
+    margin: 24px 0 0;
+}
+
+ul,ol {
+    line-height: 150%;
+    margin-block-end: 0%;
+}
+
+ul li, ol li {
+    padding: 0.8%;
+}
+
+ol ul {
+    line-height: 100%;
+}
+
+.box-wrapper h3 {
+    margin: 0% 0%
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-wrapper {
+    padding: 2% 16%;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #8ec9f9;
+    box-shadow: 5px 5px #7c858c;
+    margin: 4% -10%;
+    padding: 3% 4%;
+}
+
+.image-wrapper {
+    display: flex;
+    gap: 4%;
+    margin: 2% 0%;
+}
+
+.caption p, .caption ul, .caption ol{
+    font-size: 18px;
+    margin-block-start: 0.5em;
+}
+
+/* .section {
+}
+
+.subsection {
+    display: flex;
+    flex-direction: column;
+}
+
+/* alternating colors from https://stackoverflow.com/questions/39052549/change-the-background-color-of-alternate-elements-css */
+.section-wrapper:nth-child(odd) {
+    background-color: #FFBC42;
+}
+
+.section-wrapper:nth-child(even) {
+    background-color: #FFC457;
+}
+
+.attribution {
+    font-size: 12px;
+}
+
+#persona-image-wrapper {
+    justify-content: center;
+}
+
+#questions-wrapper {
+    padding: 3% 3% 3% 3%;
+    background-color: #8ec9f9;
+    box-shadow: 5px 5px #7c858c;
+    gap: 4%;
+    margin: 3% 0 0
+}
+
+#questions li {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+#questions-box h4 {
+    margin-block-start: 0%;
+}
+
+#questions {
+    margin-block-start: 0%;
+    margin-block-end: 0%;
+}
+
+#questions-box {
+    margin: 2% 0%;
+}
+
+#sketch {
+    max-width: 70%;
+    min-width: 50%;
+}
